@@ -1,4 +1,27 @@
-﻿# Awesome Deep Learning [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+```mermaid
+sequenceDiagram
+    %% Force ordering by explicitly setting up participants
+    actor User
+    participant Native
+    participant Flutter
+    participant Rust
+    participant Backend
+    title App Startup
+
+    User->>Native: Open App
+    activate User
+        par Rust init
+            Native->>Rust: Provide callback reference
+            Rust->>Rust: Store reference
+        and Flutter init
+            Native->>Flutter: Start Flutter app 
+            Flutter->>Flutter: Initialize app
+        end
+        Flutter->>User: UI
+    deactivate User
+```
+ 
+ # Awesome Deep Learning [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 ## Table of Contents
 
